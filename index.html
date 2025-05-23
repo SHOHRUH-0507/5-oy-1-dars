@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mercedes-Benz 560 SEC</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: sans-serif;
+        background: rgb(69, 69, 69);
+      }
+      .container {
+        display: flex;
+        max-width: 1000px;
+        margin: 20px auto;
+        background: white;
+        border-radius: 14px;
+        overflow: hidden;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .h2 {
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        width: 200px;
+        height: 830px;
+        color: orange;
+        background-color: #000000;
+        text-align: center;
+        padding-left: 15px;
+      }
+      h4 {
+        color: #ffab7e;
+        text-align: start;
+        padding-left: 10px;
+      }
+      .sidebar {
+        width: 100px;
+        background: #000000;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+        border-right: 1px solid #ddd;
+      }
+      .sidebar img {
+        width: 100%;
+        border-radius: 7px;
+        cursor: pointer;
+        transition: transform 0.3s;
+      }
+      .sidebar img:hover {
+        transform: scale(1.05);
+      }
+      .main-content {
+        flex: 1;
+        background: #000000;
+        color: white;
+        position: relative;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+      }
+      .main-content h1 {
+        font-size: 24px;
+        margin: 0 0 10px 0;
+      }
+
+      .main-content .certified {
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: bold;
+      }
+      .main-content .certified img {
+        width: 40px;
+      }
+      .car {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        max-height: 100%;
+      }
+      h1 {
+        color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="sidebar">
+        <img src="img/560 SEC.jpg" alt="mini1" onclick="changeImage(0)" />
+        <img src="img/560 SEC 2.jpg" alt="mini2" onclick="changeImage(1)" />
+        <img src="img/560 SEC 3.jpg" alt="mini3" onclick="changeImage(2)" />
+        <img src="img/560 SEC 4.jpg" alt="mini4" onclick="changeImage(3)" />
+        <img src="img/560 SEC 5.jpg" alt="mini5" onclick="changeImage(4)" />
+        <img src="img/560 SEC 6.jpg" alt="mini6" onclick="changeImage(5)" />
+      </div>
+      <div class="h2">
+        <h2>
+          Mercedes-Benz 560 SEC (1986) — bu 1980-yillardagi eng nufuzli ,
+          hashamatli kupe avtomobillaridan biri hisoblanadi. U
+          Mercedes-Benz’ning mashhur <br />
+          W126 S-klass platformasiga asoslangan va eng yuqori darajadagi
+          texnologiyalar, qulaylik va kuchli dvigatelni taklif etadi.
+        </h2>
+        <h4>
+          Dvigatel 5.6 litr V8 benzin <br />
+          Quvvat: ~300 ot kuchi <br />
+          Uzatilish 4 avtomatik <br />
+          Tezlanish (0-100 km/soat): taxminan 7 soniya <br />
+          Maksimal tezlik: 250 km/soat (elektron cheklov bilan) <br />
+          Ichki dizayn: Charm o‘rindiqlar, yog‘och dekor, elektr oynalar,
+          konditsioner va boshqa hashamatli opsiyalar
+        </h4>
+      </div>
+      <div class="main-content">
+        <img id="mainImage" class="car" src="img/560 SEC 7.jpg" alt="car" />
+      </div>
+    </div>
+    <h1>
+      U o‘z davrining ramzi bo‘lib, hanuzgacha klassik avtomobillar ishqibozlari
+      orasida juda qadrlanadi.
+    </h1>
+    <script>
+      const images = [
+        "img/560 SEC.jpg",
+        "img/560 SEC 2.jpg",
+        "img/560 SEC 3.jpg",
+        "img/560 SEC 4.jpg",
+        "img/560 SEC 5.jpg",
+        "img/560 SEC 6.jpg",
+      ];
+
+      function changeImage(index) {
+        document.getElementById("mainImage").src = images[index];
+      }
+    </script>
+  </body>
+</html>
